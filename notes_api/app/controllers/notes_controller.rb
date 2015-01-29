@@ -8,7 +8,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.save
-    render json: @note
+    render json: {note: @note}
   end
 
   def show
